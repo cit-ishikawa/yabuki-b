@@ -41,7 +41,7 @@ $prepare->execute();
 
 
 //結果の確認
-echo '<a href="login.php"><h2>会員登録完了</h2></a>';
+echo '<div class="back"><a href="login.php"><h2>会員登録完了</h2></a></div>';
 ?>
 
  </div>

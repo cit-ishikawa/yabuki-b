@@ -12,9 +12,9 @@
  <div class="content">
  <h1>ログイン画面</h1>
   <form method="post" action="login_check.php">
-   <p>学籍番号を入力してください。</p>
+   <div class="log">学籍番号を入力してください。</div>
   <input type="text" name="mail" maxlength="7">
-   <p>パスワードを入力してください。</p>
+   <div class="log">パスワードを入力してください。</div>
   <input type="password" name="pass" maxlength="10"><br><br>
   <input type="submit" value="ログイン"><br><br>
   <input type="reset" value="リセット"><br><br>
