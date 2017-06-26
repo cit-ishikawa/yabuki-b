@@ -1,18 +1,18 @@
 <?php
-// データベース設定（サーバで公開するとき）
+// �ǡ����١�������ʥ����ФǸ�������Ȥ���
 $dbServer = '127.0.0.1';
 $dbUser = $_SERVER['MYSQL_USER'];
 $dbPass = $_SERVER['MYSQL_PASSWORD'];
 $dbName = $_SERVER['MYSQL_DB'];
 
-# MySQL用のDSN文字列です。
+# MySQL�Ѥ�DSNʸ����Ǥ���
 $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
 
-//データベースへの接続
+//�ǡ����١����ؤ���³
 $db = new PDO($dsn, $dbUser, $dbPass);
 
 
-//カウント１
+//������ȣ�
 if (isset($_POST['masu1'])){
 $masu1 = $_POST['masu1'];
 $sql = 'UPDATE count SET masu1 = masu1 + 1 WHERE kazu = "sum1"';
@@ -54,6 +54,6 @@ $stmt->execute();
 }
 
 
-//結果の確認
-echo '<a href="count.php">アンケート結果を表示</a>';
+//��̤γ�ǧ
+echo '<a href="count.php">���󥱡��ȷ�̤�ɽ��</a>';
 ?>
