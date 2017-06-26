@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Database: `mydb`
 --
 CREATE DATABASE IF NOT EXISTS `anke` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `anke`;
+USE `mydb`;
 
 -- --------------------------------------------------------
 
@@ -349,7 +349,7 @@ CREATE TABLE `pma__recent` (
 --
 
 INSERT INTO `pma__recent` (`username`, `tables`) VALUES
-('root', '[{\"db\":\"anke\",\"table\":\"count\"},{\"db\":\"prototype1\",\"table\":\"members\"},{\"db\":\"prototype1\",\"table\":\"labos\"},{\"db\":\"flat\",\"table\":\"app\"},{\"db\":\"mydb\",\"table\":\"don\"},{\"db\":\"sample1\",\"table\":\"members\"},{\"db\":\"sample1\",\"table\":\"labos\"},{\"db\":\"ecdb\",\"table\":\"user\"},{\"db\":\"tesuto1\",\"table\":\"members\"},{\"db\":\"sample3\",\"table\":\"members\"}]');
+('root', '[{\"db\":\"mydb\",\"table\":\"count\"},{\"db\":\"prototype1\",\"table\":\"members\"},{\"db\":\"prototype1\",\"table\":\"labos\"},{\"db\":\"flat\",\"table\":\"app\"},{\"db\":\"mydb\",\"table\":\"don\"},{\"db\":\"sample1\",\"table\":\"members\"},{\"db\":\"sample1\",\"table\":\"labos\"},{\"db\":\"ecdb\",\"table\":\"user\"},{\"db\":\"tesuto1\",\"table\":\"members\"},{\"db\":\"sample3\",\"table\":\"members\"}]');
 
 -- --------------------------------------------------------
 
