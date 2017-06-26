@@ -65,3 +65,43 @@ button.button2 {
     background-color:#49a9d4;
     border-radius:30px;
 }
+
+button.button3 {
+    width:200px;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    padding:10px 10px;
+    color:#fff;
+    background-color:#49a9d4;
+    border-radius:30px;
+}
+
+button.button4 {
+    width:200px;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    padding:10px 10px;
+    color:#fff;
+    background-color:#49a9d4;
+    border-radius:30px;
+}
+
+button.button5 {
+    width:200px;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    padding:10px 10px;
+    color:#fff;
+    background-color:#49a9d4;
+    border-radius:30px;
+}
+
+table.type01 {
+width: 50%;
+rules: none;
+border: 2px solid #000000;
+background-color: #ffffff;
+}

@@ -2,24 +2,32 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>ログイン画面</title>
+  <title>新規会員登録</title>
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
   <link rel="stylesheet" type="text/css" href="decorate.css">
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <script>
+$(function() {
+$("#partsM").load("menu.html");
+});
+  </script>
  </head>
 
  <body>
+ <div id="partsM"></div>
  <div class="container">
  <div class="content">
 
 <?php
-//データベース接続設定
+// データベース設定（サーバで公開するとき）
 $dbServer = '127.0.0.1';
 $dbUser = $_SERVER['MYSQL_USER'];
 $dbPass = $_SERVER['MYSQL_PASSWORD'];
 $dbName = $_SERVER['MYSQL_DB'];
+
 # MySQL用のDSN文字列です。
 $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
-
 
 //データベースへの接続
 $db = new PDO($dsn, $dbUser, $dbPass);
