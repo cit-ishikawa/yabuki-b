@@ -9,7 +9,7 @@ $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
 //データベースへの接続
 $db = new PDO($dsn, $dbUser, $dbPass);
 //検索実行
-$sql = 'SELECT * FROM app';
+$sql = 'SELECT * FROM count';
 $prepare = $db->prepare($sql);
 $prepare->execute();
 $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
