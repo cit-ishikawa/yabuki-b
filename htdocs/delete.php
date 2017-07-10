@@ -18,7 +18,7 @@ $sql = "DELETE FROM app WHERE ID = :ID";
 $stmt = $db->prepare($sql);
 
 // 削除するレコードが複数の場合はカンマ区切りで追加する
-$params = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+$params = array(15,16,17,18,19);
 
 // foreachで削除するレコードを1件ずつループ処理
 foreach ($params as $value) {
