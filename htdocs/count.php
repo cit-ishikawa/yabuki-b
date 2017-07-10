@@ -31,7 +31,7 @@ $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
 $db = new PDO($dsn, $dbUser, $dbPass);
 
 //検索実行
-$sql = 'SELECT * FROM count WHERE id = 1';
+$sql = 'SELECT * FROM count WHERE id = id ORDER BY id DESC LIMIT 1';
 $stmt = $db -> query($sql);
 foreach ($stmt as $row);
 
