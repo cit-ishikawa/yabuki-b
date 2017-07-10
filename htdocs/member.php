@@ -33,7 +33,7 @@ $pass = $_POST['pass'];
 
 
 //検索実行
-$sql = 'INSERT INTO app (name, mail, pass) VALUES (:name, :mail, :pass)';
+$sql = 'INSERT INTO members (name, mail, pass) VALUES (:name, :mail, :pass)';
 $prepare = $db->prepare($sql);
 $prepare->bindValue(':name', $name, PDO::PARAM_STR);
 $prepare->bindValue(':mail', $mail, PDO::PARAM_STR);
