@@ -11,8 +11,8 @@
  <body>
  <div class="container">
  <div class="content">
-<table width="50%"border="1" rules="none" bordercolor="#000000" background-color: #ffffff>
 <h1>現在の学食の混雑状況</h1>
+<table>
 
 <?php
 //エラー非表示

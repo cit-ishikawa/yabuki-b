@@ -4,7 +4,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 margin-left: 0px;
 margin-right: 0px;
-background-image: url("tillt.png")
+background-image: url("tillt.png");
 }
 
 img {
@@ -16,7 +16,13 @@ display:block;
 .container {
 margin: 0px auto;
 max-width: 960px;
-background-image: url("pop1.png")
+background-image: url("pop1.png");
+}
+
+.content {
+border: 2px solid #000000;
+text-align: center;
+height: 600px;
 }
 
 a:link       {color:#DC143C;text-decoration:none;}
@@ -41,14 +47,10 @@ font-size: 30px;
 font-weight:bold;
 }
 
-.menu-box {
-border: 2px solid blue;
-background:#FFFFFF;
-height: 44px;
-}
-
-.content {
+table {
+background-color:#FFFFFF;
 border: 2px solid #000000;
-text-align: center;
-height: 600px;
+font-size:30px;
+width:100%;
+height:80%;
 }

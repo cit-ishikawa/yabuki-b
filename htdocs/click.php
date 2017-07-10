@@ -25,6 +25,7 @@ $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
 //データベースへの接続
 $db = new PDO($dsn, $dbUser, $dbPass);
 
+
 date_default_timezone_set('Asia/Tokyo');
 $i = date("i");
 
