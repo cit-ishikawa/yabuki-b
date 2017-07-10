@@ -6,6 +6,11 @@
   <title>アンケート</title>
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="stylesheet" type="text/css" href="decorate.css">
+ </head>
+
+ <body>
+ <div class="container">
+ <div class="content">
 
 <?php
 // データベース設定（サーバで公開するとき）
@@ -38,6 +43,7 @@ $prepare->bindValue(':date', $H);
 $prepare->bindValue(':time', $J);
 $prepare->execute();
 
+//カウント1
 if ($row = $prepare->fetch()) {
 if (isset($_POST['A1'])){
 $A1 = $_POST['A1'];
@@ -57,12 +63,32 @@ $stmt->execute($params);
 }
 }
 
+//カウント2
+if ($row = $prepare->fetch()) {
+if (isset($_POST['A2'])){
+$A2 = $_POST['A2'];
+$sql = 'UPDATE count SET A2 = A2 + 1 WHERE id = id ORDER BY id DESC LIMIT 1';
+$stmt = $db -> prepare($sql);
+$stmt->bindParam(':A2', $A2, PDO::PARAM_STR);
+$stmt->execute();
+}
+
+}else{
+if (isset($_POST['A2'])){
+$A2 = $_POST['A2'];
+$sql = 'INSERT INTO count (date,time,A2) VALUES (:date,:time,:A2)';
+$stmt = $db->prepare($sql);
+$params = array(':date' => $H, ':time' => $J, ':A2' => +1);
+$stmt->execute($params);
+}
+}
+
 
 //結果の確認
-echo '<a href="count.php">アンケート結果を表示</a>';
+echo '<h2><a href="count.php">アンケート結果を表示</a></h2>';
 ?>
 
-</head>
-<body>
-</body>
+ </div>
+ </div>
+ </body>
 </html>
