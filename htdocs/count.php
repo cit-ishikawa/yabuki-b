@@ -11,7 +11,7 @@
  <body>
  <div class="container">
  <div class="content">
-<table width="50%"border="1" rules="none" bordercolor="#000000">
+<table width="50%"border="1" rules="none" bordercolor="#000000" background-color: #ffffff>
 <h1>現在の学食の混雑状況</h1>
 
 <?php
@@ -37,10 +37,10 @@ foreach ($stmt as $row);
 
 $data = array(
         array("１", $row['A1']),
-        array("２", $row['A1']),
-        array("３", $row['A1']),
-        array("４", $row['A1']),
-        array("５", $row['A1'])    );
+        array("２", $row['A2']),
+        array("３", $row['A3']),
+        array("４", $row['A4']),
+        array("５", $row['A5'])    );
 
     for($i = 0 ; $i < count($data) ; $i++) {
         if(strlen($data[$i][0]) > $maxlen) {//文字数最大
