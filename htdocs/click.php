@@ -63,25 +63,7 @@ $stmt->execute($params);
 }
 }
 
-//カウント2
-if ($row = $prepare->fetch()) {
-if (isset($_POST['A2'])){
-$A2 = $_POST['A2'];
-$sql = 'UPDATE count SET A2 = A2 + 1 WHERE id = id ORDER BY id DESC LIMIT 1';
-$stmt = $db -> prepare($sql);
-$stmt->bindParam(':A2', $A2, PDO::PARAM_STR);
-$stmt->execute();
-}
 
-}else{
-if (isset($_POST['A2'])){
-$A2 = $_POST['A2'];
-$sql = 'INSERT INTO count (date,time,A2) VALUES (:date,:time,:A2)';
-$stmt = $db->prepare($sql);
-$params = array(':date' => $H, ':time' => $J, ':A2' => +1);
-$stmt->execute($params);
-}
-}
 
 
 //結果の確認
