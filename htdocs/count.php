@@ -30,17 +30,31 @@ $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
 //データベースへの接続
 $db = new PDO($dsn, $dbUser, $dbPass);
 
-//検索実行
+//検索実行1
+$sql = 'SELECT * FROM count WHERE id = id ORDER BY id DESC LIMIT 1';
+$prepare = $db->prepare($sql);
+$prepare->execute();
+$result = $prepare->fetchAll(PDO::FETCH_ASSOC);
+
+//結果の出力
+foreach ($result as $person) {
+  echo $person['date'];
+  echo ' ';
+  echo $person['time'];
+}
+
+
+//検索実行2
 $sql = 'SELECT * FROM count WHERE id = id ORDER BY id DESC LIMIT 1';
 $stmt = $db -> query($sql);
 foreach ($stmt as $row);
 
 $data = array(
-        array("１", $row['A1']),
-        array("２", $row['A2']),
-        array("３", $row['A3']),
-        array("４", $row['A4']),
-        array("５", $row['A5'])    );
+        array("鬼", $row['A1']),
+        array("難", $row['A2']),
+        array("普", $row['A3']),
+        array("簡", $row['A4']),
+        array("空", $row['A5'])    );
 
     for($i = 0 ; $i < count($data) ; $i++) {
         if(strlen($data[$i][0]) > $maxlen) {//文字数最大
